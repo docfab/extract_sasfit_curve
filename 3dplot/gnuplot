@@ -1,0 +1,9 @@
+set zrange [0.001:10]
+set xrange [0.005:0.07]
+
+set logscale xz
+set xyplane at 0.001
+
+file(n) = sprintf("%d.dat",n)
+
+splot for [i=185:229:3] file(i) using 1:4:2 with points pt 7 ps 0.5 black notitle, for [i=185:229:3] file(i) using 1:4:3 with line linecolor rgb "red" lw 2 notitle
